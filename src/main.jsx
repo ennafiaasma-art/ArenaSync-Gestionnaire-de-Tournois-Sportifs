@@ -1,11 +1,15 @@
 import { createRoot } from 'react-dom/client'
+import App from './App'
+
+
 
  const root=createRoot(document.getElementById("root"))
  root.render(
+    
+    <App/>
 
-<header class="bg-blue-400 d-flex flex"> 
-    <h1> bonjour</h1>
-    <img src="" alt="" />
-    <img src="" alt="" />
-</header>
+   
+   
+
+
 )
