@@ -1,7 +1,7 @@
 
 import Header from './components/Header'
 import Input from './components/Input';
-import StatusBadg from './components/StatusBadg';
+import StatusBadge from './components/StatusBadg';
 
 import TournamentCard from './components/TournamentCard';
 
@@ -11,7 +11,7 @@ function App() {
  <div>
     <Header/>
     <Input/>
-    <StatusBadg status="Pending"/>
+    <StatusBadge status="Pending"/>
     <div className="p-10">
       <TournamentCard />
     </div>

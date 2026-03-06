@@ -1,55 +1,62 @@
+import React from "react";
 import StatusBadge from "./StatusBadg";
-import { tournamentData } from "./data/tournamentDB";
+
 
 export default function TournamentCard() {
-  const cards = []; // tableau pour stocker les JSX
 
-  for (let i = 0; i < tournamentData.length; i++) {
-    const tournament = tournamentData[i];
 
-    cards.push(
-      <div
-        key={i}
-        className="max-w-sm p-5 bg-white rounded-2xl shadow-md space-y-3"
-      >
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full">
-            🎾
-          </div>
+  return(
+   
+    <div className="max-w-sm p-5 bg-white rounded-2xl shadow-md space-y-3">
 
-          <div>
-            <h3 className="font-semibold text-gray-800">
-              {tournament.title}
-            </h3>
-
-            <StatusBadge status={tournament.status} />
-          </div>
+      {/* Header */}
+      <div className="flex items-center gap-3">
+        <div className="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full">
+          🎾
         </div>
 
-        <p className="text-sm text-gray-600">{tournament.description}</p>
+        <div>
+          <h3 className="font-semibold text-gray-800">
+            Shuttle Masters League
+          </h3>
 
-        <hr />
-
-        <div className="space-y-2 text-sm text-gray-600">
-          <div className="flex items-center gap-2">
-            👥<span>{tournament.value}</span>
-          </div>
-
-          <div className="flex items-center gap-2">
-            🏆<span>{tournament.format}</span>
-          </div>
-
-          <div className="flex items-center gap-2">
-            📅<span>{tournament.date}</span>
-          </div>
-
-          <div className="flex items-center gap-2">
-            📍<span>{tournament.location}</span>
-          </div>
+          <StatusBadge status="On Going" />
         </div>
       </div>
-    );
-  }
 
-  return <>{cards}</>; // retourne le tableau de JSX
+      {/* Description */}
+      <p className="text-sm text-gray-600">
+        Top players battle it out with skillful rallies and powerful smashes.
+      </p>
+
+      <hr />
+
+      {/* Infos */}
+      <div className="space-y-2 text-sm text-gray-600">
+
+        <div className="flex items-center gap-2">
+          👥
+          <span>24/32 Participants • Public</span>
+        </div>
+
+        <div className="flex items-center gap-2">
+          🏆
+          <span>Single Elimination</span>
+        </div>
+
+        <div className="flex items-center gap-2">
+          📅
+          <span>October 12, 2025</span>
+        </div>
+
+        <div className="flex items-center gap-2">
+          📍
+          <span>Badminton Hall 1</span>
+        </div>
+
+      </div>
+
+    </div>
+  );
 }
+  
