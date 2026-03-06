@@ -9,7 +9,7 @@ export default function StatusBadge({ status }) {
 
 return (
   <p
-    className={`px-3 py-1 text-xs font-semibold text-white bg-green-500 rounded-full${color[status] || "bg-gray-100 text-white"}`}> {status} </p>
+    className={`px-3 py-1 text-xs font-semibold text-white bg-green-500 rounded-full ${color[status] || "bg-gray-100 text-white"}`}> {status} </p>
 
 
 

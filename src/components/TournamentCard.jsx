@@ -1,5 +1,5 @@
 
-import StatusBadge from './components/StatusBadg';
+import StatusBadge from './StatusBadge';
 
 
 export default function TournamentCard({ tournament })  {
